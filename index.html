@@ -13,14 +13,14 @@
     <body class="blue lighten-5">
         <nav>
             <div class="nav-wrapper red">
-                <a href="#" class="brand-logo center black-text">GeekHaven Workshop Attendance Portal</a>                    
+                <a href="#" class="brand-logo center black-text">GeekHaven Workshop Attendance Portal</a>
             </div>
         </nav>
         <div class="container">
             <div class="row">
                 <div class="input-field col s6 l6 m6">
-                    <select>
-                        <option value="" disabled selected>Choose Wing</option>
+                    <select class="imp">
+                        <option value="-1" disabled selected>Choose Wing</option>
                         <option value="1">Web Development</option>
                         <option value="2">FOSS</option>
                         <option value="3">Competitive Coding</option>
@@ -29,11 +29,11 @@
                         <option value="6">Graphics</option>
                         <option value="7">Tesla</option>
                     </select>
-                    <label>Wing</label>
+
                 </div>
                 <div class="input-field col s6 l6 m6">
-                    <select>
-                        <option value="" disabled selected>Choose Workshop</option>
+                    <select class="imp">
+                        <option value="-1" disabled selected>Choose Workshop</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -42,7 +42,7 @@
                         <option value="6">6</option>
                         <option value="7">7</option>
                     </select>
-                    <label>Workshop</label>
+
                 </div>
                 <div class="row">
                     <form class="col s12">
