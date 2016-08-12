@@ -4,3 +4,8 @@ body {
 .imp {
 	display: block;
 }
+
+#input-boxes input {
+	text-align: left;
+	margin-right: 10px;
+}

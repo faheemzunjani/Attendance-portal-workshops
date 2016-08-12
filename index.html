@@ -45,14 +45,16 @@
 
                 </div>
                 <div class="row">
-                    <form class="col s12">
+                    <!-- <form class="col s12" onsubmit="return false;"> -->
                     <div class="row">
                         <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea"></textarea>
-                        <label for="textarea1">Enrollment Numbers</label>
+                        <!-- <label for="textarea1">Enrollment Numbers</label> -->
+                        <div id="input-boxes">
+                            <input class="input-field col s2 l2 m2" maxlength="10" />
+                            </div>
                         </div>
                     </div>
-                    </form>
+                    <!-- </form> -->
                 </div>
                 <button class="btn waves-effect waves-light" type="submit" name="action">Submit
                     <i class="material-icons right">send</i>
