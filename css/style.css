@@ -5,7 +5,12 @@ body {
 	display: block;
 }
 
-#input-boxes input {
+.clearfix {
+	height: 20px;
+	clear: both;
+}
+
+input {
 	text-align: left;
 	margin-right: 10px;
 }
