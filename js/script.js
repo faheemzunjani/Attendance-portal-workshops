@@ -8,6 +8,9 @@ document.getElementById('input-boxes').addEventListener('keydown', function(even
 			event.preventDefault();
 			return false;
 		}
+		if (event.target.value.length == 0) {
+			return false;
+		}
 		var newInput = document.createElement('input');
 		newInput.setAttribute('class', 'input-field col s2 l2 m2');
 		newInput.setAttribute('maxlength', '10');
