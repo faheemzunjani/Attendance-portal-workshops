@@ -18,21 +18,22 @@
         </nav>
         <div class="container">
             <div class="row">
+            <form class="col s12" onsubmit="return false;" action='/post.php' method="POST"> 
                 <div class="input-field col s6 l6 m6">
-                    <select class="imp">
+                    <select class="imp" name='wing'>
                         <option value="-1" disabled selected>Choose Wing</option>
-                        <option value="1">Web Development</option>
-                        <option value="2">FOSS</option>
-                        <option value="3">Competitive Coding</option>
-                        <option value="4">Networking</option>
-                        <option value="5">App Development</option>
-                        <option value="6">Graphics</option>
-                        <option value="7">Tesla</option>
+                        <option value="webd">Web Development</option>
+                        <option value="foss">FOSS</option>
+                        <option value="comp">Competitive Coding</option>
+                        <option value="netw">Networking</option>
+                        <option value="appd">App Development</option>
+                        <option value="grap">Graphics</option>
+                        <option value="tesl">Tesla</option>
                     </select>
 
                 </div>
-                <div class="input-field col s6 l6 m6">
-                    <select class="imp">
+              <!--   <div class="input-field col s6 l6 m6">
+                    <select class="imp" name='workshop'>
                         <option value="-1" disabled selected>Choose Workshop</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -43,33 +44,32 @@
                         <option value="7">7</option>
                     </select>
 
-                </div>
+                </div> -->
+                  
                 <div class="row">
                     <div class="clearfix"></div>
                     Enter roll number in given input. <br>
                     Press [Enter] for a new entry and [Delete] to remove entry. 
-                    <!-- <form class="col s12" onsubmit="return false;"> -->
-                    <div class="row">
-                        <div class="input-field col s12">
-                        <!-- <label for="textarea1">Enrollment Numbers</label> -->
-                            <div id="input-boxes">
-                                <input class="input-field col s2 l2 m2" maxlength="10" placeholder="IIT2******" />
+                        <div class="row">
+                            <div class="input-field col s12">
+                            <!-- <label for="textarea1">Enrollment Numbers</label> -->
+                                <div id="input-boxes">
+                                    <input name='student[0]' class="input-field col s2 l2 m2" maxlength="10" placeholder="IIT2******" />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- </form> -->
                 </div>
                 <div class="clearfix"></div>
                     For the tutor
                 <div class="input-field col s12">
-                    <form method='post' onsubmit="submitForm(); return false;">
-                        <input class="input-field col s2 l2 m2" maxlength="10" placeholder="Your roll number" /> &nbsp; 
-                        <input class="input-field col s2 l2 m2" maxlength="10" placeholder="LDAP Password" style="margin-left: 1px solid" /> &nbsp; 
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                            <i class="material-icons right">send</i>
-                        </button>
-                    </form>
+                    <input name='username' class="input-field col s2 l2 m2" maxlength="10" placeholder="Your roll number" /> &nbsp; 
+                    <input name='password' class="input-field col s2 l2 m2" type="password" placeholder="LDAP Password" style="margin-left: 1px solid" /> &nbsp; 
                 </div>
+
+            </form>
+            <button class="btn waves-effect waves-light">Submit
+                <i class="material-icons right">send</i>
+            </button>
             </div>
         </div>
 
