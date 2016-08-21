@@ -1,0 +1,38 @@
+An XHR query makes a form submission to a php page with following values in $_POST
+ 
+ // credentials of person making the entry
+ * username $_POST['username']
+ * password $_POST['password']
+ * wing		$_POST['wing'] (integer)
+ * workshop $_POST['workshop'] (workshop number)
+
+ 	1 > Web Development
+	2 > FOSS
+	3 > Competitive Coding
+	4 > Networking
+	5 > App Development
+	6 > Graphics
+	7 > Tesla
+ * student  $_POST['student']  an array
+
+ $students = $_POST['student'] is an array of enrollment numbers
+ count($students) students attended the workshop.
+
+ database has two tables : 
+ 	one has the list of people who can take attendance, and other is for students.
+
+ tutor : one field : roll numbers
+
+ student :
+  	* roll number 
+	* one field for each wing.. containing an integer for the number of workshops attended.
+
+
+WORKING : (up to you)
+1. check whether $username is authorized for taking attendance and authenticate the password using ldap etc.
+2. make an entry for each student in array $students in the respective wing by $wing number.
+
+  ** like this ** ** http://stackoverflow.com/questions/4205181/insert-into-a-mysql-table-or-update-if-exists **
+
+  INSERT INTO table (id, name, age) VALUES (1, 'A', 19) ON DUPLICATE KEY UPDATE id = id + 1;
+

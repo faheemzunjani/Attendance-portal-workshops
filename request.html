@@ -1,0 +1,37 @@
+<html>
+<head>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<a href="http://localhost:5000/checklogin/adeora25">go go go</a>
+<input id="user" type="text">
+<input id="pass" type="password">
+<button onclick="login(user.value,pass.value)">login</button>
+<p id="demo"></p>
+<script>
+function login(username,password) {
+    
+    if(username.length==0 || password.length==0)
+	{	
+		document.getElementById("demo").innerHTML="Username or Password too short.";
+		return;
+	}
+	else {
+		var xmlhttp= new XMLHttpRequest();
+		xmlhttp.onreadystatechange=function(){
+			if(xmlhttp.readyState==4 && xmlhttp.status==200){
+				document.getElementById("demo").innerHTML=xmlhttp.responseText;
+				
+			}
+		}
+		xmlhttp.open("GET","logincheck.php?roll="+username+"&pass="+password,true);
+		xmlhttp.send();
+	}
+
+
+}
+</script>
+</body>
+</html>
